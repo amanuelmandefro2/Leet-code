@@ -1,7 +1,7 @@
-from math import log
+from math import log, floor, ceil
 class Solution:
     def isPowerOfTwo(self, n: int) -> bool:
         if n <= 0 :
             return False
-        result = log(n)/ log(2)
-        return result.is_integer()
+        return floor(log2(n)) == ceil(log2(n))
+        
